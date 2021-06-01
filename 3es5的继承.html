@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // 先创建封装父级
+  function Proson (name){
+    this.name = name
+  }
+  Proson.prototype.eat =function(){
+    console.log('wobuhuijia');
+  }
+
+// 封装一个子集
+  function Student (age,sex,name){
+    // this.age = age;
+    this.sex = sex;
+    Proson.call(this.name)
+  }
+  // 原型链的继承
+  // 这种继承为共用一个原型对象，在后续改动子元素的时候父元素也会跟着一起改变会有影响（所以不用）
+  // Proson.prototype = Student.prototype
+  // 用实例化对象也能调用父元素
+  Student.prototype=new Proson;
+  // 注：prototype为原型对象，可以使用添加新的属性或者方法，
+
+  // 在继承时得用到构造器，构造器就是修复确定原本得方向
+  Student.prototype.constructor=Student;
+
+  // 使用new调用students加入元素
+const re =new Student('h5','lining','kobe')
+  console.log(re);
+
+
+</script>
+</body>
+</html>
