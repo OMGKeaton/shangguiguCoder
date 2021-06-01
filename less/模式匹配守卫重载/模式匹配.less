@@ -1,0 +1,19 @@
+// 模式匹配就是用@_适配任何一个标签。
+.content(@_){
+    width: 10px;
+    height: 10px;
+    background: pink;
+}
+.content(color1){
+    color: aqua
+}
+.content(color2){
+    border: 1px solid red;
+
+}
+b{
+    content(color1)
+}
+x(
+    content(color2)
+)

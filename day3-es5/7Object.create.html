@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // 创建数组得第三种方式为Object.create，前两种一种为new object和直面量创建方式
+  // Object.create包含有两个参数：
+//   第一个参数是当前创建对象得原型对象（必填项）
+// 第二个是当前对象得拓展属性，并且包含属性得描述：
+// writable：控制属性得值是否可以被修改，默认为false，可改为true。
+// enumerable：控制当前得属性是否可以被枚举出来
+//   configurable：控制当前属性是否可以被删除 或者 enumerable和configurable的值是否可以被改变
+var p ={
+      name: 'laowang'
+}
+var p1 =Object.create(p)
+console.log(p1)
+// 创建一个普通对象
+
+  var p1 =Object.create(Object.prototype)
+  console.log(p1)
+  // 创建一个干净得对象
+  var p1 =Object.create(null)
+  console.log(p1)
+// 再同时使用第一个和第二个参数
+  var p2 =Object.create(p,{
+      name :{
+          value:'LINING',
+          writable:true,
+          enumerable:true,
+          configurable:true
+      }
+  })
+  // 不在Object.create里直接加属性是没问题得
+  p2.set='huijia'
+
+
+  for(let key in p2){
+      console.log(key)
+  }
+delete p2.name
+  console.log(p2)
+
+
+</script>
+</body>
+</html>

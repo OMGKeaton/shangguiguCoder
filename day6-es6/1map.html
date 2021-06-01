@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// map是一个值-值得写法，传统的写法是键值对，就是js的对象的键只能用字符串来当，就会有很多得拘束，所以map就提供了数据解构的方法
+// ，键的可以很多来代替，比如对象等等，总的来说Object 结构提供了“字符串—值”的对应，Map 结构提供了“值—值”的对应，
+
+// var obj ={
+//     name:'李宁'
+// }
+// console.log(obj)
+
+
+// 使用new来创建一个map对象,Map记得大写。
+var re = new Map([
+    [name,'niling']
+])
+console.log(re)
+
+// map创建的函数长度
+console.log(re.size)
+
+// 什么是set：
+// set是一种类似数组，里面没有重复的值（用来去重）
+{ const re =new Set([1,2,3,4,5,6,6,7,8,8,1])
+    console.log(re) }
+
+
+// set是一种构造函数，可以接受数组作为参数
+// set来构造数组加入进去
+
+
+
+
+// const re1 = re.set([1,2,3],'hello')
+// console.log(re1);
+
+
+</script>
+</body>
+</html>

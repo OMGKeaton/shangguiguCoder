@@ -1,0 +1,47 @@
+// less变量当属性值用
+@back:#666;
+// less变量当属性名来用（选用时加大括号）
+@backname: background-color;
+// less当标签选择器来用（选用时加大括号）
+@box:#box;
+
+// 变量的其他用法
+@url1: "https://tva1.sinaimg.cn/large/00831rSTgy1gdnerxegkhj30j008d3yj.jpg";
+@url:url(@url1);
+
+
+body{
+    color: @back;
+    @{backname}:red;
+    @{box}:{
+        width: 100px;
+        height: 100px;
+        border: 1px solid @back;
+        .ico{
+            color: :@back;
+        }
+        .inner{
+            @{backname}:@back;
+
+        }
+        .links{
+            background: @url;
+        }
+    }
+
+}
+@var: 0;
+
+.class {
+    @var: 1;
+
+    .brass {
+        @var: 2;
+        //less变量延迟加载
+        three: @var;
+        @var: 3;
+    }
+
+    one: @var;
+}
+

@@ -1,0 +1,13 @@
+// zoom为兼容性
+.clearFix{
+    *zoom = 1;
+    &：after{
+        content: '\200B';
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+#con{
+    .clearFix()
+}

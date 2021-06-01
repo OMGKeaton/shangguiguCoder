@@ -1,0 +1,47 @@
+// 无参
+.center(){
+    width: 100px;
+    height: 100px;
+    background: pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    botton:0;
+    margin: auto;
+
+}
+.center(@w,@h,@b){
+    width: @w;
+    height: @h;
+    background: @b;
+    top: 0;
+    left: 0;
+    right:0;
+    botton:0;
+    margin: auto;
+}
+.center(@w：100px,@h：100px,@b：red){
+    width: @w;
+    height: @h;
+    background: @b;
+    top: 0;
+    left: 0;
+    right:0;
+    botton:0;
+    margin: auto;
+}
+
+
+
+#outer {
+    .center(900px, 800px, pink);
+
+    #inner {
+        .center(600px, 600px, red);
+
+        #con {
+            .center(@h: 200px, @b: green);
+        }
+    }
+}

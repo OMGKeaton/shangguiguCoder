@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+call bind apply：
+- 全部都是Function的原型对象上的方法，所以所有的函数都可以调用这三个方法
+- 都是改变 函数执行时的上下文,其实就是改变函数执行时的this指向
+- this被改变的情况
+当this被指向一个基本包装类型的时候，则指向指向其包装对象
+- 当this被指向null或者undefined的时候，则指向window对象
+- 当this被指向一个object类型的时候，则直接指向该对象
+
+
+call:
+- 调用了函数，并改变的函数的this
+- 如果要给函数传参，则在call的第二个参数开始 依次传入
+
+apply:
+- 调用了函数，并改变的函数的this
+- 如果要给函数传参，则把所有的参数放在一个数组中 然后传给apply的第二个参数
+
+bind：
+- 改变的函数的上下文，也就是改变了函数的this指向
+- 并没有调用函数，而是返回了改变this后的函数
+- 传参和call类似
+
+this：
+- this的指向当前this所在的函数相关
+- 根据函数的调用方式不同，this指向不同
+- 函数的调用方法
+- 默认调用 fn()  - this指向window
+- 上下文对象调用 obj.fn()  this指向上下文对象（注意隐式丢失现象）
+- 实例化调用  new fn()  this指向实例化对象
+- 强制绑定 fn.call() this指向call的第一个参数
+
+
+
+</body>
+</html>

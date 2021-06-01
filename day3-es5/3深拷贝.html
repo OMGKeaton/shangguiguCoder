@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function checkType(data) {
+        return Object.prototype.toString.call(data).slice(8,-1).toLowerCase();
+
+    }
+     function deepClone(data){
+         if(checkType(data) == 'array'){
+             var newobj= [];
+         }
+     }if(checkType(data) == 'object' ){
+         var newobj = {};
+
+     }else{
+         return data;
+     }
+     for(let key in data){
+         //在获取data的某个属性值的时候，先递归调用自身,递归函数就是对自身的一种调用时一种循环算法。
+        newobj[key] = deepClone(data[key]) ; 
+     }
+     return newobj;
+
+
+     var data = {
+         name :'lining',
+         age :18,
+     }
+
+    </script>
+</body>
+</html>

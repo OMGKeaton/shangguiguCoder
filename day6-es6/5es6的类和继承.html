@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    /*
+        class：
+            - 通过class关键字，可以定义类
+            - ES6 的class可以看作只是一个语法糖，它的绝大部分功能，ES5 都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。
+            - constructor方法是类的默认方法，通过new命令生成对象实例时，自动调用该方法。一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加。
+
+    */
+
+
+    // class Person {
+    //     constructor(name, age) {
+    //         console.log(constructor);
+    //         //给实例化对象扩展的属性和方法：被称作为公有属性和公有方法
+    //         this.name = name;
+    //         this.age = age;
+    //         //直接扩展给实例化对象的公有方法 被称作为特权方法
+    //         this.study = function () {
+    //             console.log("js");
+    //         }
+    //         //在构造函数中声明的变量或方法称作为私有属性和私有方法
+    //         var a = 1;
+    //     }
+    //
+    //     //在原型对象上扩展的公有方法
+    //     eat() {
+    //         console.log("eat");
+    //     }
+    //
+    //     //扩展一个静态属性
+    //     static hello = "world";
+    //
+    // }
+    //
+    // //把构造函数当做是对象 扩展的属性和方法 被称作为静态属性或静态方法，和实例化对象一点关系都没有
+    // // Person.hello = "world";
+    //
+    // //将来也可以通过原型对象来补充方法
+    // Person.prototype.say = function () {
+    //     console.log("hello");
+    // }
+    //
+    // const p1 = new Person("laowang", 18);
+    // console.log(p1);
+    // console.log(p1.constructor === Person); //true
+    // console.log(p1.hello); //undefined
+    // console.log(Person.hello); //world
+
+    // es6的继承：
+    // -直接定义一个子类并继承某个父类
+    // -如果子类想要使用constructor构建自己的属性，则需要使用super()拿到父类的this，如果不调用super方法，子类就得不到this对象，就不能再扩展属性和方法
+
+    class Preson{
+        constructor(age) {
+            this.name = name;
+
+        }
+    }
+    class Student extends Preson{
+        constructor(name,age) {
+            super(age);
+            this.name = name
+        }
+    }
+    const va =new Student('nhao','wo hao')
+    console.log(va);
+</script>
+</body>
+
+</html>

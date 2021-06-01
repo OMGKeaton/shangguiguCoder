@@ -1,0 +1,21 @@
+#outer {
+  width: 100px;
+  height: 100px;
+  background: pink;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  botton: 0;
+  margin: auto;
+}
+#outer #inner {
+  width: 600px;
+  height: 600px;
+  background: red;
+  top: 0;
+  left: 0;
+  right: 0;
+  botton: 0;
+  margin: auto;
+}
